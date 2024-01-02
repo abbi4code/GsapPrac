@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::selection{
+  color: #fff;
+  background-color: black;
+}
+.navbar{
+  /* height: 100px; */
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 1000;
+  position: fixed;
+  
+}
+.navpart1{
+  /* background-color: red; */
+  height: 82px;
+  overflow: hidden;
+  /* as we already set the height to be 82px so the rest part we can deal with overflow part 
+  and svg are set to inline block you need to take their tag and set them block*/
+}
+.navpart1 svg{
+  display: block;
+}
+.navbar .navpart2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  /* padding: 1remS; */
+}
+.navlinks{
+  padding: 10px;
+}
+.navbar .navpart2 a{
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  margin: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.navpart2 .navicons i{
+  font-size: 15px;
+  /* margin-right: 40px; */
+  font-weight: 500;
+  
+}
+.navicons{
+  padding: .8rem;
+  border-radius: 40px;
+  background-color: white;
+  display: flex;
+  gap: 60px;
+}
+#cursor{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: fixed;
+  background-color: yellow;
+  /* scale: 0; */
+  transform: translate(-50%,-50%) scale(0);
+}
+
+html body{
+  height: 100%;
+  width: 100%;
+}
+
+#page1{
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 0 2vw;
+  padding-top: 18vh;
+}
+#page1 h1{
+  font-size: 15.4vw;
+  text-transform: uppercase;
+  font-family: futura;
+  line-height: 14vw;
+  letter-spacing: -8px;
+}
+#video-container{
+  height: 100vh;
+  width: 100%;
+  margin-top: 1vw;
+  position: relative;
+}
+
+#video-container video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#video-container #play{
+  padding: 2vw 1vw;
+  background-color: black;
+  color: white;
+  font-size: 1.5vw;
+  position: fixed;
+   /*no space created for fixed css  */
+  text-transform: uppercase;
+  font-family: futura;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+  /* transform: translate(-50%,-50%); */
+}
+#page2{
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  padding: 2vw 2vw;
+}
+#page2 .elem{
+  height: 100%;
+  width: 32%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: red; */
+}
+.elem .dets{
+  height: 55px;
+  width: 70%;
+  position: absolute;
+  z-index: 9;
+  /* transform: translate(-50%,-50%); */
+  /* top: 50%;
+  left: 50%; */
+  border-radius: 50px;
+
+  background-color: #e5f0d6;
+}
+.elem .dets:hover{
+  height: 200px;
+  transition: .2s ease;
+}
+
+/* below code img to put img in the div and fit the img */
+#page2 .elem img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#page3{
+  min-height: 120vh;
+  width: 100%;
+   
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* flex wrap will set the div size into the ori width n height as when you use dis flex div get flexible by changing it height and width */
+
+  
+}
+.child{
+  height: 55vh;
+  width: 40%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.child img{
+  height: 100%;
+  /* this automatically fixes the img sizes */
+}
+@media (max-width: 600px){
+  .navbar{
+  /* height: 100px; */
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 1000;
+  position: fixed;
+  
+}
+.navpart1{
+  /* background-color: red; */
+  height: 82px;
+  overflow: hidden;
+  /* as we already set the height to be 82px so the rest part we can deal with overflow part 
+  and svg are set to inline block you need to take their tag and set them block*/
+}
+.navpart1 svg{
+  display: block;
+  height: 65px;
+  width: 40px;
+  
+}
+.navbar .navpart2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  /* padding: 1remS; */
+}
+.navlinks{
+  padding: 10px;
+  display: none;
+}
+.navbar .navpart2 a{
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  margin: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.navpart2 .navicons i{
+  font-size: 14px;
+  /* margin-right: 40px; */
+  font-weight: 500;
+  
+}
+.navicons{
+  padding: .8rem 1.5rem;
+  border-radius: 35px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  
+  /* gap: 80px; */
+  
+}
+  #page1 h1{
+  font-size: 16vw;
+  
+  letter-spacing: -3px;
+  text-align: center;
+}
+#page1{
+  min-height: 60vh;
+  width: 100%;
+  
+  padding: 0 1.3vw;
+  padding-top: 30vh;
+}
+#video-container{
+  height: 25vh;
+  width: 100%;
+  margin-top: 4vw;
+  
+}
+#video-container #play{
+  padding: 6vw 3vw;
+  background-color: black;
+  color: white;
+  font-size: 4.5vw;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+   
+  text-transform: uppercase;
+  font-family: futura;
+  border-radius: 50%;
+  opacity: 1;
+  scale: 1;
+}
+#page2{
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  padding: 2vw 2vw;
+  /* background-color: red; */
+}
+#page2 .elem{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vh;
+
+  /* background-color: red; */
+}
+#page3{
+  min-height: 120vh;
+  width: 100%;
+   
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* flex wrap will set the div size into the ori width n height as when you use dis flex div get flexible by changing it height and width */
+
+  
+}
+.child{
+  height: 55vh;
+  width: 80vw;
+  /* changing width here will put the img col wise */
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.child img{
+  height: 100%;
+  /* this automatically fixes the img sizes */
+}
+
+}
+
+
+
+
+ 
